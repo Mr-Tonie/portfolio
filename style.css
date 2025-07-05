@@ -1,0 +1,246 @@
+/* Preloader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 6px solid #ccc;
+  border-top: 6px solid var(--header-bg);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Root variables for Light Theme */
+:root {
+  --bg-color: #f2f7ff;
+  --text-color: #333;
+  --header-bg: #1a237e;
+  --footer-bg: #1a237e;
+  --link-color: white;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background: var(--header-bg);
+  color: var(--link-color);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section#intro, section.content {
+  padding: 50px;
+  text-align: center;
+  background: white;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--link-color);
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.project {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fefefe;
+  border-left: 6px solid var(--header-bg);
+  border-radius: 4px;
+  text-align: left;
+}
+
+/* Theme toggle button */
+.theme-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+.theme-button:hover {
+  color: #ffeb3b;
+}
+
+/* Forms */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  background-color: var(--header-bg);
+  color: var(--link-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #3949ab;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  section#intro, section.content {
+    padding: 20px;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    max-width: 100%;
+  }
+
+  .project {
+    padding: 15px;
+    border-left-width: 4px;
+  }
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --header-bg: #212121;
+  --footer-bg: #212121;
+  --link-color: #fdd835;
+}
+
+/* Apply dark theme background and text */
+body.dark-theme header,
+body.dark-theme footer {
+  background: var(--header-bg);
+  color: var(--link-color);
+}
+
+body.dark-theme nav a {
+  color: var(--link-color);
+}
+
+body.dark-theme section#intro,
+body.dark-theme section.content {
+  background: #1e1e1e;
+  color: var(--text-color);
+  box-shadow: 0 0 15px rgb(255 255 255 / 0.05);
+}
+
+body.dark-theme .project {
+  background-color: #2a2a2a;
+  border-left-color: var(--link-color);
+}
+
+body.dark-theme form input[type="submit"] {
+  background-color: var(--link-color);
+  color: #212121;
+}
+
+body.dark-theme form input[type="submit"]:hover {
+  background-color: #fbc02d;
+}
+
+body.dark-theme form input[type="text"],
+body.dark-theme form input[type="email"],
+body.dark-theme form textarea {
+  background-color: #333;
+  color: var(--text-color);
+  border: 1px solid #555;
+}
+
+body.dark-theme form input[type="text"]::placeholder,
+body.dark-theme form input[type="email"]::placeholder,
+body.dark-theme form textarea::placeholder {
+  color: #bbb;
+}
