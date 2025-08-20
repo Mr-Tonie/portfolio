@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Mr Tony</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Preloader -->
-<div id="preloader">
-  <div class="spinner"></div>
-</div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
   <header>
     <h1>Contact Me</h1>
     <nav>
       <button id="theme-toggle" class="theme-button">🌙</button>
-
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="content">
-    <form action="mailto:paytonchirova@gmail.com" method="post" enctype="text/plain">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br /><br />
+  <section class="content contact-section">
+    <h2>Get In Touch</h2>
+    <p>If you’d like to work with me or just say hello, feel free to send me a message.</p>
 
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required /><br /><br />
-
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="6" required></textarea><br /><br />
-
-      <input type="submit" value="Send Message" />
+    <form class="contact-form" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">📩 Send Message</button>
     </form>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+      <p><strong>Location:</strong> Harare, Zimbabwe</p>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Mr Tony. All rights reserved.</p>
+    <p>&copy; 2025 payton_chirova. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/Mr-Tonie" target="_blank">💻 GitHub</a> |
+      <a href="https://www.linkedin.com/in/payton-chirova-448496339" target="_blank">🔗 LinkedIn</a> |
+      <a href="mailto:paytonchirova2@gmail.com">📧 Email</a>
+    </div>
   </footer>
-  <script src="main.js"></script>
 
+  <script src="java.js"></script>
 </body>
 </html>
