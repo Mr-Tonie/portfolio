@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>About Me | Mr Tony</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Mr Tony</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
   <header>
     <h1>About Me</h1>
     <nav>
       <button id="theme-toggle" class="theme-button">🌙</button>
-
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="content">
-    <h2>Who is Mr Tony?</h2>
-    <p>
-      I am a 21-year-old Software Engineering student based in Harare, Zimbabwe. I'm passionate about building
-      real-world solutions through web and mobile applications. My interests include full-stack development,
-      cloud technologies, and system design.
-    </p>
+  <section class="content about-section">
+    <img src="images/facePic.jpg" alt="Mr Tony" class="profile-img">
 
-    <h3>Skills</h3>
-    <ul>
-      <li>Frontend: HTML, CSS, JavaScript, Flutter</li>
-      <li>Backend: PHP, Node.js, Firebase, MySQL</li>
-      <li>Tools: Git, Visual Studio Code, Figma</li>
-    </ul>
+    <div class="about-text">
+      <h2>Hello, I’m Payton Chirova 👋</h2>
+      <p>
+        I am a passionate <strong>Software Engineer</strong> from Harare, Zimbabwe. 
+        Currently pursuing my diploma in Software Engineering, I enjoy building applications 
+        that solve real-world problems and make people’s lives easier.
+      </p>
+
+      <p>
+        My technical strengths include <strong>C#</strong>, <strong>JavaScript</strong>, 
+        <strong>PHP</strong>, and <strong>SQL</strong>. I have hands-on experience in 
+        developing management systems, e-commerce platforms, and responsive websites.
+      </p>
+
+      <p>
+        Outside coding, I enjoy exploring new technologies, mentoring peers, and contributing 
+        to youth projects in my community.
+      </p>
+
+      <a href="PaytonChirova CV.pdf" download class="btn">📄 Download My CV</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Mr Tony. All rights reserved.</p>
+    <p>&copy; 2025 payton_chirova. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/Mr-Tonie" target="_blank">💻 GitHub</a> |
+      <a href="https://www.linkedin.com/in/payton-chirova-448496339" target="_blank">🔗 LinkedIn</a> |
+      <a href="mailto:paytonchirova2@gmail.com">📧 Email</a>
+    </div>
   </footer>
-  <script src="main.js"></script>
 
+  <script src="java.js"></script>
 </body>
 </html>
